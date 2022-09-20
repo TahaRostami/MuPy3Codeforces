@@ -3,8 +3,8 @@ from statistics import median
 import matplotlib.pyplot as plt
 
 
-FilenamePrioritizationProblem="../results/results/simul_res_MutantPrioritization.json"
-FilenamesSetProblem=[f"../results/results/simul_res_MutantSetProblem_{p}percent.json" for p in [2,5,10]]
+FilenamePrioritizationProblem="../results/simul_results/simul_res_MutantPrioritization.json"
+FilenamesSetProblem=[f"../results/simul_results/simul_res_MutantSetProblem_{p}percent.json" for p in [2,5,10]]
 
 def viz_muPrioritizationProblem_res(simul_res_filename,Methods=['Random', 'Subsuming', 'FaultRevClf'],DisplayName=['Random', 'Subsuming', 'FaultRevClf'],BasedOn=['percentage_of_mu', 'percentage_of_tests'],lblY=["Percentage of mutants","Percentage of tests"],YLim=[-2,102],Facecolors = ['tab:red','tab:orange', 'tab:blue', 'tab:green']):
     with open(simul_res_filename,"r",encoding="UTF_8") as f:simul_res_dict = json.loads(f.read())
